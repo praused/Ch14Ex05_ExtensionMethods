@@ -35,6 +35,10 @@ namespace Ch14Ex05_ExtensionMethods
             Console.WriteLine();
             Console.WriteLine("String length backwards:");
             Console.WriteLine($"{sourceString.Length.ToStringReversed()}");
+            Console.WriteLine();
+            Console.WriteLine("String converted to Acronym:");
+            Console.WriteLine($"{sourceString.ToAcronym()}");
+            Console.WriteLine();
             Console.ReadKey();
         }
     }

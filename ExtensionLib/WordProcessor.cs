@@ -77,5 +77,14 @@ namespace ExtensionLib
             }
             return capitalizedWords;
         }
+
+        //Added ToAcronym method from Ch14 exercise 6.
+        //An extension method, extending string.
+        //Uses a lambda expression with the Aggregate LINQ extension method and the tertiary operator.
+        public static string ToAcronym(this string inputString)
+        {
+            return inputString.Trim().Split(' ').Aggregate<string, string>("", (a, b) => a + (b.Length > 0 ? b.ToUpper()[0].ToString() : ""));
+        }
+
     }
 }
